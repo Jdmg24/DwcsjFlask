@@ -11,6 +11,7 @@ app.app_context().push()
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] ='thisisasecretkey'
+app.run(debug=false,host='0.0.0.0')
 
 login_manager = LoginManager()
 login_manager.init_app(app)
